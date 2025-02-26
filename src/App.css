@@ -1,38 +1,274 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+  position: relative; /* Required for the pseudo-element positioning */
+  color: white; /* Change text color to contrast with the background */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./assets/background.png'); /* Path to the image in the public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Adjust opacity of the background image (0 = fully transparent, 1 = fully opaque) */
+  z-index: -1; /* Place the pseudo-element behind the content */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.lsdlogo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 680px;
+  position: relative;
+  z-index: 1;
+  margin-top: 0px;
+}
+
+.date {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  position: relative;
+  z-index: 1;
+  margin-top: 0px;
+}
+
+
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px; /* Space between items */
+  margin-bottom: 20px;
+  font-size: 35px; /* Bigger font size */
+  margin-top: 25px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 26px;
+}
+.nav-menu a:hover {
+  color: rgb(238, 139, 224); /* Green color on hover */
+}
+
+.separator {
+  color: #333; /* Color of the separator */
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+
+.text-box {
+  background-color: rgb(247, 252, 251); /* Light gray background */
+  border: 2px solid black; /* Green border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Space inside the box */
+  font-size: 18px; /* Font size */
+  width: 710px; /* Width of the text box */
+  margin: 20px auto; /* Center the box and add space around it */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  color: black;
+  font-weight: bold;
+  opacity: 75%;
+}
+
+.h2 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px; /* Add space below the container */
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  border: 0px solid black; /* Green border around the image */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure the border wraps around the content */
+}
+
+.image-wrapper img {
+  width: 150px; /* Fixed width for the image */
+  height: auto;
+  border-radius: 1px; /* Slightly rounded corners for the image */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  padding: 5px;
+}
+
+
+
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Semi-transparent green background */
+  color: white; /* Text color */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 5px; /* Match the border radius */
+  font-weight: bold
+}
+
+.image-wrapper:hover .image {
+  opacity: 0; /* Hide the image on hover */
+}
+
+.image-wrapper:hover .hover-text {
+  opacity: 1; /* Show the text on hover */
+}
+
+
+.h3 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Leaderboard */
+.leaderboard {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Top 3 Ranks */
+.top-three {
+  padding: 20px;
+  background-color: rgb(17, 16, 16);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.top-rank {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-rank:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.rank-1 {
+  background-color: #ffd700; /* Gold for 1st rank */
+}
+
+.rank-2 {
+  background-color: #c0c0c0; /* Silver for 2nd rank */
+}
+
+.rank-3 {
+  background-color: #cd7f32; /* Bronze for 3rd rank */
+}
+
+.rank {
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px; /* Fixed width for rank number */
+  text-align: center;
+}
+
+.name {
+  flex-grow: 1;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 18px;
+  width: 60px; /* Fixed width for score */
+  text-align: right;
+}
+
+/* Scrollable Ranks */
+.scrollable-ranks {
+  max-height: 0; /* Initially hidden */
+  overflow-y: auto; /* Enable vertical scrolling */
+  transition: max-height 0.5s ease-out; /* Smooth transition */
+}
+
+.leaderboard:hover .scrollable-ranks {
+  max-height: 200px; /* Reveal on hover */
+}
+
+.rank-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.rank-item:hover {
+  background-color: rgb(58, 53, 53); /* Light gray background on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.rank-item:last-child {
+  border-bottom: none;
+}
+
+.h4 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
 }
