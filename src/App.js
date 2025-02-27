@@ -179,14 +179,22 @@ function App() {
                     <p>1st Place – 500 points</p>
                     <p>2nd Place – 300 points</p>
                     <p>3rd Place – 200 points</p>
-                    <p>
-                      Participation : 10 points bonus for each team registration
-                      from a department.
-                    </p>
                     Tiebreakers : In case of a tie in overall leaderboard
                     standings, the department with the most 1st place finishes
                     will rank higher. If still tied, the department with the most
                     finalist appearances will rank higher.
+                  </div>
+                </div>
+
+
+                <div className="contact">
+                  <div className="h5">
+                    <h1>Contacts</h1>
+                  </div>
+                  <div className="text-box">          
+                    <p>Ananya – 9600455506</p>
+                    <p>Raajan – 9686412075</p>
+                    <p>Vignesh – 9019747931</p>
                   </div>
                 </div>
               </>
