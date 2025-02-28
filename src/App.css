@@ -350,8 +350,8 @@
   }
 
   .text-box {
-    width: 95%; /* Adjust text box width for mobile */
-    font-size: 14px; /* Even smaller font size for mobile */
+    width: 85%; /* Adjust text box width for mobile */
+    font-size: 10px; /* Even smaller font size for mobile */
   }
 
   .image-wrapper img {
