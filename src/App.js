@@ -18,7 +18,7 @@ import image5 from "./assets/stage.png";
 
 function App() {
   const [players, setPlayers] = useState([
-    { id: 1, name: "Basic Sciences", score: 100 },
+    { id: 1, name: "Basic Sciences", score: 0 },
     { id: 2, name: "Chemical", score: 0 },
     { id: 3, name: "Civil", score: 0 },
     { id: 4, name: "CSE", score: 0 },
