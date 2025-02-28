@@ -5,6 +5,7 @@
   min-height: 100vh; /* Ensure the background covers the full viewport height */
   position: relative; /* Required for the pseudo-element positioning */
   color: white; /* Change text color to contrast with the background */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .App::before {
@@ -25,7 +26,7 @@
 .lsdlogo {
   display: block;
   margin: 0 auto;
-  width: 150px;
+  width: 150px; /* Default size for desktop */
   position: relative;
   z-index: 1;
   margin-top: 10px;
@@ -37,6 +38,7 @@
   margin: 0 auto;
   max-width: 100%; /* Ensure the logo scales down on smaller screens */
   width: 680px; /* Default width for desktop */
+  height: auto; /* Maintain aspect ratio */
   position: relative;
   z-index: 1;
   margin-top: 0px;
@@ -45,7 +47,7 @@
 .date {
   display: block;
   margin: 0 auto;
-  width: 150px;
+  width: 150px; /* Default size for desktop */
   position: relative;
   z-index: 1;
   margin-top: 0px;
@@ -56,9 +58,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 18px; /* Space between items */
+  gap: 18px; /* Default gap for desktop */
   margin-bottom: 20px;
-  font-size: 35px; /* Bigger font size */
+  font-size: 35px; /* Default font size for desktop */
   margin-top: 25px;
 }
 
@@ -68,7 +70,7 @@
   border-radius: 10px;
   padding: 5px 10px;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 26px; /* Default font size for desktop */
 }
 
 .nav-menu a:hover {
@@ -81,7 +83,7 @@
 }
 
 .h1 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
@@ -91,9 +93,9 @@
   border: 2px solid black; /* Green border */
   border-radius: 10px; /* Rounded corners */
   padding: 15px; /* Space inside the box */
-  font-size: 18px; /* Font size */
-  width: 90%; /* Responsive width */
-  max-width: 710px; /* Maximum width for desktop */
+  font-size: 18px; /* Default font size for desktop */
+  width: 710px; /* Default width for desktop */
+  max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
   margin: 20px auto; /* Center the box and add space around it */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   color: black;
@@ -102,7 +104,7 @@
 }
 
 .h2 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
@@ -111,7 +113,7 @@
 .image-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Default gap for desktop */
   flex-wrap: wrap;
 }
 
@@ -129,7 +131,7 @@
 }
 
 .image-wrapper img {
-  width: 150px; /* Fixed width for the image */
+  width: 150px; /* Default size for desktop */
   height: auto;
   border-radius: 1px; /* Slightly rounded corners for the image */
   transition: opacity 0.3s ease; /* Smooth transition for hover effect */
@@ -163,15 +165,15 @@
 }
 
 .h3 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
 
 /* Leaderboard */
 .leaderboard {
-  max-width: 90%; /* Responsive width */
-  width: 500px; /* Default width for desktop */
+  max-width: 500px; /* Default width for desktop */
+  width: 100%; /* Ensure it scales down on smaller screens */
   margin: 0 auto;
   background-color: black;
   border-radius: 10px;
@@ -181,7 +183,7 @@
 
 /* Top 3 Ranks */
 .top-three {
-  padding: 20px;
+  padding: 20px; /* Default padding for desktop */
   background-color: rgb(17, 16, 16);
   color: white;
 }
@@ -190,7 +192,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px; /* Default padding for desktop */
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -217,7 +219,7 @@
 
 .rank {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 20px; /* Default font size for desktop */
   width: 30px; /* Fixed width for rank number */
   text-align: center;
 }
@@ -225,13 +227,13 @@
 .name {
   flex-grow: 1;
   margin: 0 10px;
-  font-size: 18px;
+  font-size: 18px; /* Default font size for desktop */
   font-weight: bold;
 }
 
 .score {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 18px; /* Default font size for desktop */
   width: 60px; /* Fixed width for score */
   text-align: right;
 }
@@ -266,69 +268,82 @@
 }
 
 .h4 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
 
 .h5 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller desktops */
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+  .lsdlogo {
+    width: 100px; /* Smaller logo for tablets */
+  }
+
   .logo {
-    width: 80%; /* Adjust logo width for smaller screens */
+    width: 90%; /* Adjust logo width for tablets */
+  }
+
+  .date {
+    width: 100px; /* Smaller date image for tablets */
   }
 
   .nav-menu {
-    font-size: 28px; /* Reduce font size for navigation */
-    gap: 10px; /* Reduce gap between items */
+    font-size: 28px; /* Smaller font size for tablets */
+    gap: 10px; /* Smaller gap for tablets */
   }
 
   .nav-menu a {
-    font-size: 20px; /* Reduce font size for navigation links */
+    font-size: 20px; /* Smaller font size for tablets */
   }
 
   .text-box {
-    width: 90%; /* Adjust text box width for smaller screens */
-    font-size: 16px; /* Reduce font size for text box */
+    width: 90%; /* Adjust text box width for tablets */
+    font-size: 16px; /* Smaller font size for tablets */
   }
 
   .leaderboard {
-    width: 90%; /* Adjust leaderboard width for smaller screens */
-  }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-  .logo {
-    width: 90%; /* Adjust logo width for mobile screens */
-  }
-
-  .nav-menu {
-    font-size: 24px; /* Further reduce font size for navigation */
-    gap: 8px; /* Further reduce gap between items */
-  }
-
-  .nav-menu a {
-    font-size: 18px; /* Further reduce font size for navigation links */
-  }
-
-  .text-box {
-    width: 95%; /* Adjust text box width for mobile screens */
-    font-size: 14px; /* Further reduce font size for text box */
-  }
-
-  .leaderboard {
-    width: 95%; /* Adjust leaderboard width for mobile screens */
+    width: 90%; /* Adjust leaderboard width for tablets */
   }
 
   .image-wrapper img {
-    width: 120px; /* Reduce image size for mobile screens */
+    width: 120px; /* Smaller image for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .lsdlogo {
+    width: 80px; /* Even smaller logo for mobile */
+  }
+
+  .logo {
+    width: 95%; /* Adjust logo width for mobile */
+  }
+
+  .date {
+    width: 80px; /* Even smaller date image for mobile */
+  }
+
+  .nav-menu {
+    font-size: 24px; /* Even smaller font size for mobile */
+    gap: 5px; /* Even smaller gap for mobile */
+  }
+
+  .nav-menu a {
+    font-size: 16px; /* Even smaller font size for mobile */
+  }
+
+  .text-box {
+    width: 95%; /* Adjust text box width for mobile */
+    font-size: 14px; /* Even smaller font size for mobile */
+  }
+
+  .image-wrapper img {
+    width: 100px; /* Even smaller image for mobile */
   }
 }

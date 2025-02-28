@@ -7,21 +7,22 @@
 .quiz-soc-logo {
   display: block;
   margin: 0 auto 10px auto; /* Center the logo and add margin below */
-  min-width: 100%; /* Ensure the image scales with the container */
-  max-width: 700px; /* Limit the maximum width */
+  width: 500px; /* Default width for desktop */
+  max-width: 100%; /* Ensure it scales down on smaller screens */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Bottom margin */
   margin-top: 10px; /* Top margin */
 }
 
 h2 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
 
 table {
-  width: 100%; /* Full width on smaller screens */
+  width: 80%; /* Default width for desktop */
+  max-width: 800px; /* Maximum width for desktop */
   margin: 0 auto;
   border-collapse: collapse;
   background-color: black; /* Black background for the table */
@@ -31,7 +32,7 @@ table {
 }
 
 th, td {
-  padding: 10px;
+  padding: 12px; /* Default padding for desktop */
   border: 1px solid #444; /* Dark gray border for cells */
 }
 
@@ -64,7 +65,7 @@ tr:nth-child(3):hover {
 }
 
 .h5 {
-  font-size: large;
+  font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
 }
@@ -74,39 +75,39 @@ tr:nth-child(3):hover {
 /* For tablets and smaller desktops */
 @media (max-width: 768px) {
   .quiz-soc-logo {
-      min-width: 80%; /* Adjust logo width for smaller screens */
+    width: 80%; /* Adjust logo width for tablets */
   }
 
   table {
-      width: 90%; /* Adjust table width for smaller screens */
+    width: 90%; /* Adjust table width for tablets */
   }
 
   th, td {
-      padding: 8px; /* Reduce padding for smaller screens */
+    padding: 10px; /* Reduce padding for tablets */
   }
 
   h2, .h5 {
-      font-size: medium; /* Adjust font size for smaller screens */
+    font-size: 20px; /* Adjust font size for tablets */
   }
 }
 
 /* For mobile devices */
 @media (max-width: 480px) {
   .quiz-soc-logo {
-      min-width: 90%; /* Adjust logo width for mobile screens */
+    width: 90%; /* Adjust logo width for mobile */
   }
 
   table {
-      width: 100%; /* Full width for mobile screens */
+    width: 100%; /* Full width for mobile */
   }
 
   th, td {
-      padding: 6px; /* Further reduce padding for mobile screens */
-      font-size: small; /* Reduce font size for better readability */
+    padding: 8px; /* Further reduce padding for mobile */
+    font-size: 14px; /* Reduce font size for mobile */
   }
 
   h2, .h5 {
-      font-size: small; /* Adjust font size for mobile screens */
-      margin-top: 20px; /* Reduce margin for mobile screens */
+    font-size: 18px; /* Adjust font size for mobile */
+    margin-top: 20px; /* Reduce margin for mobile */
   }
 }
