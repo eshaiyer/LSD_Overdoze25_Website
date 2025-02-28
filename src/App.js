@@ -18,9 +18,9 @@ import image5 from "./assets/stage.png";
 
 function App() {
   const [players, setPlayers] = useState([
-    { id: 1, name: "ECE", score: 100 },
-    { id: 2, name: "EEE", score: 91 },
-    { id: 3, name: "CSE", score: 95 },
+    { id: 1, name: "ECE", score: 0 },
+    { id: 2, name: "EEE", score: 0 },
+    { id: 3, name: "CSE", score: 0 },
     { id: 4, name: "IT", score: 0 },
     { id: 5, name: "MACS", score: 0 },
     { id: 6, name: "Civil", score: 0 },
@@ -28,9 +28,8 @@ function App() {
     { id: 8, name: "MME", score: 0 },
     { id: 9, name: "Mining", score: 0 },
     { id: 10, name: "Chemical", score: 0 },
-    { id: 11, name: "Physics", score: 0 },
-    { id: 12, name: "Chemistry", score: 0 },
-    { id: 13, name: "SOM", score: 0 },
+    { id: 11, name: "Basic Sciences", score: 0 },
+    { id: 12, name: "SOM", score: 0 },
   ]);
 
   const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
