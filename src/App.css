@@ -179,7 +179,7 @@
 /* Adjust styles for very small screens (e.g., phones in portrait mode) */
 @media (max-width: 480px) {
   .hover-text {
-    font-size: 0.5rem; /* Even smaller font size for phones */
+    font-size: 0.7rem; /* Even smaller font size for phones */
     padding: 5px; /* Reduce padding further */
   }
 }
