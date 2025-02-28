@@ -303,6 +303,15 @@
     width: 120px; /* Smaller date image for tablets */
   }
 
+  .nav-menu {
+    font-size: 28px; /* Smaller font size for tablets */
+    gap: 10px; /* Smaller gap for tablets */
+  }
+
+  .nav-menu a {
+    font-size: 20px; /* Smaller font size for tablets */
+  }
+
   .text-box {
     width: 90%; /* Adjust text box width for tablets */
     font-size: 16px; /* Smaller font size for tablets */
@@ -329,6 +338,15 @@
 
   .date {
     width: 100px; /* Even smaller date image for mobile */
+  }
+
+  .nav-menu {
+    font-size: 24px; /* Even smaller font size for mobile */
+    gap: 5px; /* Even smaller gap for mobile */
+  }
+
+  .nav-menu a {
+    font-size: 16px; /* Even smaller font size for mobile */
   }
 
   .text-box {
