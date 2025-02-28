@@ -162,7 +162,7 @@
   transition: opacity 0.3s ease; /* Smooth transition for hover effect */
   border-radius: 5px; /* Match the border radius */
   font-weight: bold;
-  font-size: 1.1rem; /* Default font size for desktop */
+  font-size: 1.2rem; /* Default font size for desktop */
   text-align: center; /* Ensure text is centered */
   padding: 10px; /* Add padding to prevent text from touching edges */
   box-sizing: border-box; /* Include padding in width/height calculations */
