@@ -1,72 +1,112 @@
 .quiz-soc {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .quiz-soc-logo {
-    display: block;
-    margin: 0 auto 10px auto; /* Center the logo and add margin below */
-    min-width: 400px; /* Ensure the image is at least 700px wide */
-    width: auto; /* Allow the image to scale larger if necessary */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Bottom margin */
-    margin-top: 10px; /* Top margin */
-  }
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
 
+.quiz-soc-logo {
+  display: block;
+  margin: 0 auto 10px auto; /* Center the logo and add margin below */
+  min-width: 100%; /* Ensure the image scales with the container */
+  max-width: 700px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Bottom margin */
+  margin-top: 10px; /* Top margin */
+}
 
-  h2 {
-    font-size: large;
-    font-weight: bold;
-    margin-top: 40px;
-  }
-  
-  table {
-    width: 50%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: black; /* Black background for the table */
-    color: white; /* White text color for contrast */
-    border-radius: 10px; /* Rounded corners for the table */
-    overflow: hidden; /* Ensure rounded corners are visible */
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #444; /* Dark gray border for cells */
-  }
-  
-  th {
-    background-color: #333; /* Dark gray background for headers */
-    font-weight: bold;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #222; /* Slightly lighter black for even rows */
-  }
-  
-  tr:hover {
-    background-color: #444; /* Light gray background on hover */
-  }
-  
-  /* Style for the top 3 rows */
-  tr:nth-child(1),
-  tr:nth-child(2),
-  tr:nth-child(3) {
-    background-color: #4CAF50; /* Green color */
-    color: white; /* White text for better contrast */
-  }
-  
-  /* Optional: Add hover effect for the top 3 rows */
-  tr:nth-child(1):hover,
-  tr:nth-child(2):hover,
-  tr:nth-child(3):hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
+h2 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
+}
 
+table {
+  width: 100%; /* Full width on smaller screens */
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: black; /* Black background for the table */
+  color: white; /* White text color for contrast */
+  border-radius: 10px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #444; /* Dark gray border for cells */
+}
+
+th {
+  background-color: #333; /* Dark gray background for headers */
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #222; /* Slightly lighter black for even rows */
+}
+
+tr:hover {
+  background-color: #444; /* Light gray background on hover */
+}
+
+/* Style for the top 3 rows */
+tr:nth-child(1),
+tr:nth-child(2),
+tr:nth-child(3) {
+  background-color: #4CAF50; /* Green color */
+  color: white; /* White text for better contrast */
+}
+
+/* Optional: Add hover effect for the top 3 rows */
+tr:nth-child(1):hover,
+tr:nth-child(2):hover,
+tr:nth-child(3):hover {
+  background-color: #45a049; /* Darker green on hover */
+}
 
 .h5 {
-    font-size: large;
-    font-weight: bold;
-    margin-top: 40px;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+  .quiz-soc-logo {
+      min-width: 80%; /* Adjust logo width for smaller screens */
   }
+
+  table {
+      width: 90%; /* Adjust table width for smaller screens */
+  }
+
+  th, td {
+      padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  h2, .h5 {
+      font-size: medium; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .quiz-soc-logo {
+      min-width: 90%; /* Adjust logo width for mobile screens */
+  }
+
+  table {
+      width: 100%; /* Full width for mobile screens */
+  }
+
+  th, td {
+      padding: 6px; /* Further reduce padding for mobile screens */
+      font-size: small; /* Reduce font size for better readability */
+  }
+
+  h2, .h5 {
+      font-size: small; /* Adjust font size for mobile screens */
+      margin-top: 20px; /* Reduce margin for mobile screens */
+  }
+}

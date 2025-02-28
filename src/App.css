@@ -35,7 +35,8 @@
 .logo {
   display: block;
   margin: 0 auto;
-  width: 680px;
+  max-width: 100%; /* Ensure the logo scales down on smaller screens */
+  width: 680px; /* Default width for desktop */
   position: relative;
   z-index: 1;
   margin-top: 0px;
@@ -49,8 +50,6 @@
   z-index: 1;
   margin-top: 0px;
 }
-
-
 
 /* Navigation Menu */
 .nav-menu {
@@ -71,6 +70,7 @@
   font-weight: bold;
   font-size: 26px;
 }
+
 .nav-menu a:hover {
   color: rgb(238, 139, 224); /* Green color on hover */
 }
@@ -86,14 +86,14 @@
   margin-top: 40px;
 }
 
-
 .text-box {
   background-color: rgb(247, 252, 251); /* Light gray background */
   border: 2px solid black; /* Green border */
   border-radius: 10px; /* Rounded corners */
   padding: 15px; /* Space inside the box */
   font-size: 18px; /* Font size */
-  width: 710px; /* Width of the text box */
+  width: 90%; /* Responsive width */
+  max-width: 710px; /* Maximum width for desktop */
   margin: 20px auto; /* Center the box and add space around it */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   color: black;
@@ -136,8 +136,6 @@
   padding: 5px;
 }
 
-
-
 .hover-text {
   position: absolute;
   top: 0;
@@ -153,7 +151,7 @@
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease; /* Smooth transition for hover effect */
   border-radius: 5px; /* Match the border radius */
-  font-weight: bold
+  font-weight: bold;
 }
 
 .image-wrapper:hover .image {
@@ -164,7 +162,6 @@
   opacity: 1; /* Show the text on hover */
 }
 
-
 .h3 {
   font-size: large;
   font-weight: bold;
@@ -173,7 +170,8 @@
 
 /* Leaderboard */
 .leaderboard {
-  max-width: 500px;
+  max-width: 90%; /* Responsive width */
+  width: 500px; /* Default width for desktop */
   margin: 0 auto;
   background-color: black;
   border-radius: 10px;
@@ -277,4 +275,60 @@
   font-size: large;
   font-weight: bold;
   margin-top: 40px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+  .logo {
+    width: 80%; /* Adjust logo width for smaller screens */
+  }
+
+  .nav-menu {
+    font-size: 28px; /* Reduce font size for navigation */
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .nav-menu a {
+    font-size: 20px; /* Reduce font size for navigation links */
+  }
+
+  .text-box {
+    width: 90%; /* Adjust text box width for smaller screens */
+    font-size: 16px; /* Reduce font size for text box */
+  }
+
+  .leaderboard {
+    width: 90%; /* Adjust leaderboard width for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .logo {
+    width: 90%; /* Adjust logo width for mobile screens */
+  }
+
+  .nav-menu {
+    font-size: 24px; /* Further reduce font size for navigation */
+    gap: 8px; /* Further reduce gap between items */
+  }
+
+  .nav-menu a {
+    font-size: 18px; /* Further reduce font size for navigation links */
+  }
+
+  .text-box {
+    width: 95%; /* Adjust text box width for mobile screens */
+    font-size: 14px; /* Further reduce font size for text box */
+  }
+
+  .leaderboard {
+    width: 95%; /* Adjust leaderboard width for mobile screens */
+  }
+
+  .image-wrapper img {
+    width: 120px; /* Reduce image size for mobile screens */
+  }
 }
