@@ -124,8 +124,7 @@ function App() {
                   <div className="image-wrapper">
                     <img src={image4} alt="QuizSoc" />
                     <div className="hover-text">
-                      <p>1st March (Prelims) | 10 AM | LHC A</p>
-                      <p>2nd March (Finals) | 10 AM | SJA</p>
+                      <p>1st March (Prelims) | 10 AM | LHC A || 2nd March (Finals) | 10 AM | SJA</p>
                     </div>
                   </div>
 
@@ -133,8 +132,7 @@ function App() {
                   <div className="image-wrapper">
                     <img src={image5} alt="FilmSoc" />
                     <div className="hover-text">
-                      <p>1st March (Pitching) | 12 PM | LHC A</p>
-                      <p>2nd March (Film making) | 2 PM | LHC A</p>
+                      <p>1st March (Pitching) | 12 PM | LHC A || 2nd March (Film making) | 2 PM | LHC A</p>
                     </div>
                   </div>
                 </div>
