@@ -1,3 +1,4 @@
+/* General Styles */
 .App {
   text-align: center;
   margin: 0;
@@ -84,18 +85,32 @@
   color: rgb(238, 139, 224); /* Green color on hover */
 }
 
-
-.separator {
-  color: #333; /* Color of the separator */
-  font-weight: bold;
+/* Schedule Section */
+.schedule-section {
+  text-align: center;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 10px;
+  max-width: 600px; /* Limit the maximum width */
+  width: 90%; /* Responsive width */
 }
 
-.h1 {
+.schedule-section h3 {
   font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
-  margin-top: 40px;
+  margin-bottom: 15px;
+  color: white; /* White text color */
 }
 
+.schedule-section p {
+  font-size: 18px; /* Default font size for desktop */
+  color: white; /* White text color */
+  margin: 10px 0; /* Add space between lines */
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Text Box */
 .text-box {
   background-color: rgb(247, 252, 251); /* Light gray background */
   border: 2px solid black; /* Green border */
@@ -109,12 +124,6 @@
   color: black;
   font-weight: bold;
   opacity: 75%;
-}
-
-.h2 {
-  font-size: 24px; /* Default font size for desktop */
-  font-weight: bold;
-  margin-top: 40px;
 }
 
 /* Image Grid */
@@ -170,12 +179,6 @@
 
 .image-wrapper:hover .hover-text {
   opacity: 1; /* Show the text on hover */
-}
-
-.h3 {
-  font-size: 24px; /* Default font size for desktop */
-  font-weight: bold;
-  margin-top: 40px;
 }
 
 /* Leaderboard */
@@ -275,13 +278,8 @@
   border-bottom: none;
 }
 
-.h4 {
-  font-size: 24px; /* Default font size for desktop */
-  font-weight: bold;
-  margin-top: 40px;
-}
-
-.h5 {
+/* Headings */
+.h1, .h2, .h3, .h4, .h5 {
   font-size: 24px; /* Default font size for desktop */
   font-weight: bold;
   margin-top: 40px;
@@ -324,6 +322,14 @@
   .image-wrapper img {
     width: 120px; /* Smaller image for tablets */
   }
+
+  .schedule-section h3 {
+    font-size: 22px; /* Smaller font size for tablets */
+  }
+
+  .schedule-section p {
+    font-size: 16px; /* Smaller font size for tablets */
+  }
 }
 
 /* For mobile devices */
@@ -341,12 +347,17 @@
   }
 
   .nav-menu {
-    font-size: 24px; /* Even smaller font size for mobile */
-    gap: 5px; /* Even smaller gap for mobile */
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 5px; /* Smaller gap for mobile */
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-top: 15px; /* Reduce margin for mobile */
   }
 
   .nav-menu a {
-    font-size: 16px; /* Even smaller font size for mobile */
+    font-size: 18px; /* Even smaller font size for mobile */
+    padding: 5px 8px; /* Adjust padding for mobile */
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center-align text */
   }
 
   .text-box {
@@ -358,26 +369,16 @@
     width: 100px; /* Even smaller image for mobile */
   }
 
+  .schedule-section h3 {
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  .schedule-section p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
   .h1, .h2, .h3, .h4, .h5 {
     font-size: 20px; /* Smaller font size for headings on mobile */
     margin-top: 20px; /* Reduce margin for headings on mobile */
   }
-
-
-  /* For mobile devices */
-@media (max-width: 480px) {
-  .nav-menu {
-    flex-direction: column; /* Stack items vertically on mobile */
-    gap: 5px; /* Smaller gap for mobile */
-    font-size: 24px; /* Smaller font size for mobile */
-    margin-top: 15px; /* Reduce margin for mobile */
-  }
-
-  .nav-menu a {
-    font-size: 18px; /* Smaller font size for mobile */
-    padding: 5px 8px; /* Adjust padding for mobile */
-    width: 100%; /* Full width for mobile */
-    text-align: center; /* Center-align text */
-  }
-}
 }
