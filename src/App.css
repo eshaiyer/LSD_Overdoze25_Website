@@ -171,7 +171,7 @@
 /* Adjust styles for tablets and smaller screens */
 @media (max-width: 768px) {
   .hover-text {
-    font-size: 0.5rem; /* Smaller font size for tablets */
+    font-size: 0.7rem; /* Smaller font size for tablets */
     padding: 8px; /* Slightly reduce padding */
   }
 }
@@ -179,7 +179,7 @@
 /* Adjust styles for very small screens (e.g., phones in portrait mode) */
 @media (max-width: 480px) {
   .hover-text {
-    font-size: 0.3rem; /* Even smaller font size for phones */
+    font-size: 0.5rem; /* Even smaller font size for phones */
     padding: 5px; /* Reduce padding further */
   }
 }
