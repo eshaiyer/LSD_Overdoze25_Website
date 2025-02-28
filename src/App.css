@@ -77,11 +77,13 @@
   padding: 5px 10px;
   font-weight: bold;
   font-size: 26px; /* Default font size for desktop */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .nav-menu a:hover {
   color: rgb(238, 139, 224); /* Green color on hover */
 }
+
 
 .separator {
   color: #333; /* Color of the separator */
@@ -301,15 +303,6 @@
     width: 120px; /* Smaller date image for tablets */
   }
 
-  .nav-menu {
-    font-size: 28px; /* Smaller font size for tablets */
-    gap: 10px; /* Smaller gap for tablets */
-  }
-
-  .nav-menu a {
-    font-size: 20px; /* Smaller font size for tablets */
-  }
-
   .text-box {
     width: 90%; /* Adjust text box width for tablets */
     font-size: 16px; /* Smaller font size for tablets */
@@ -338,15 +331,6 @@
     width: 100px; /* Even smaller date image for mobile */
   }
 
-  .nav-menu {
-    font-size: 24px; /* Even smaller font size for mobile */
-    gap: 5px; /* Even smaller gap for mobile */
-  }
-
-  .nav-menu a {
-    font-size: 16px; /* Even smaller font size for mobile */
-  }
-
   .text-box {
     width: 95%; /* Adjust text box width for mobile */
     font-size: 14px; /* Even smaller font size for mobile */
@@ -360,4 +344,22 @@
     font-size: 20px; /* Smaller font size for headings on mobile */
     margin-top: 20px; /* Reduce margin for headings on mobile */
   }
+
+
+  /* For mobile devices */
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 5px; /* Smaller gap for mobile */
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-top: 15px; /* Reduce margin for mobile */
+  }
+
+  .nav-menu a {
+    font-size: 18px; /* Smaller font size for mobile */
+    padding: 5px 8px; /* Adjust padding for mobile */
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center-align text */
+  }
+}
 }
