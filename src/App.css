@@ -6,6 +6,7 @@
   position: relative; /* Required for the pseudo-element positioning */
   color: white; /* Change text color to contrast with the background */
   overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .App::before {
@@ -27,6 +28,8 @@
   display: block;
   margin: 0 auto;
   width: 150px; /* Default size for desktop */
+  max-width: 100%; /* Ensure it scales down on smaller screens */
+  height: auto; /* Maintain aspect ratio */
   position: relative;
   z-index: 1;
   margin-top: 10px;
@@ -48,6 +51,8 @@
   display: block;
   margin: 0 auto;
   width: 150px; /* Default size for desktop */
+  max-width: 100%; /* Ensure it scales down on smaller screens */
+  height: auto; /* Maintain aspect ratio */
   position: relative;
   z-index: 1;
   margin-top: 0px;
@@ -62,6 +67,7 @@
   margin-bottom: 20px;
   font-size: 35px; /* Default font size for desktop */
   margin-top: 25px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .nav-menu a {
@@ -94,8 +100,8 @@
   border-radius: 10px; /* Rounded corners */
   padding: 15px; /* Space inside the box */
   font-size: 18px; /* Default font size for desktop */
-  width: 710px; /* Default width for desktop */
-  max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
+  width: 90%; /* Responsive width */
+  max-width: 710px; /* Maximum width for desktop */
   margin: 20px auto; /* Center the box and add space around it */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   color: black;
@@ -279,18 +285,20 @@
   margin-top: 40px;
 }
 
-/* Media Queries for Mobile Devices */
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller desktops */
 @media (max-width: 768px) {
   .lsdlogo {
-    width: 100px; /* Smaller logo for tablets */
+    width: 120px; /* Smaller logo for tablets */
   }
 
   .logo {
-    width: 90%; /* Adjust logo width for tablets */
+    width: 80%; /* Adjust logo width for tablets */
   }
 
   .date {
-    width: 100px; /* Smaller date image for tablets */
+    width: 120px; /* Smaller date image for tablets */
   }
 
   .nav-menu {
@@ -316,17 +324,18 @@
   }
 }
 
+/* For mobile devices */
 @media (max-width: 480px) {
   .lsdlogo {
-    width: 80px; /* Even smaller logo for mobile */
+    width: 100px; /* Even smaller logo for mobile */
   }
 
   .logo {
-    width: 95%; /* Adjust logo width for mobile */
+    width: 90%; /* Adjust logo width for mobile */
   }
 
   .date {
-    width: 80px; /* Even smaller date image for mobile */
+    width: 100px; /* Even smaller date image for mobile */
   }
 
   .nav-menu {
@@ -345,5 +354,10 @@
 
   .image-wrapper img {
     width: 100px; /* Even smaller image for mobile */
+  }
+
+  .h1, .h2, .h3, .h4, .h5 {
+    font-size: 20px; /* Smaller font size for headings on mobile */
+    margin-top: 20px; /* Reduce margin for headings on mobile */
   }
 }

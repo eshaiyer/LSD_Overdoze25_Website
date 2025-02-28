@@ -1,14 +1,16 @@
+/* General Styles */
 .quiz-soc {
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .quiz-soc-logo {
   display: block;
   margin: 0 auto 10px auto; /* Center the logo and add margin below */
-  width: 500px; /* Default width for desktop */
-  max-width: 100%; /* Ensure it scales down on smaller screens */
+  width: 100%; /* Ensure the logo scales with the container */
+  max-width: 500px; /* Limit the maximum width */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Bottom margin */
   margin-top: 10px; /* Top margin */
@@ -21,8 +23,8 @@ h2 {
 }
 
 table {
-  width: 80%; /* Default width for desktop */
-  max-width: 800px; /* Maximum width for desktop */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 800px; /* Limit the maximum width */
   margin: 0 auto;
   border-collapse: collapse;
   background-color: black; /* Black background for the table */
@@ -75,7 +77,7 @@ tr:nth-child(3):hover {
 /* For tablets and smaller desktops */
 @media (max-width: 768px) {
   .quiz-soc-logo {
-    width: 80%; /* Adjust logo width for tablets */
+    width: 90%; /* Adjust logo width for tablets */
   }
 
   table {
@@ -94,7 +96,7 @@ tr:nth-child(3):hover {
 /* For mobile devices */
 @media (max-width: 480px) {
   .quiz-soc-logo {
-    width: 90%; /* Adjust logo width for mobile */
+    width: 100%; /* Full width for mobile */
   }
 
   table {
@@ -109,5 +111,15 @@ tr:nth-child(3):hover {
   h2, .h5 {
     font-size: 18px; /* Adjust font size for mobile */
     margin-top: 20px; /* Reduce margin for mobile */
+  }
+
+  /* Adjust layout for smaller screens */
+  .quiz-soc {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  /* Ensure text doesn't overflow */
+  h2, .h5, th, td {
+    word-wrap: break-word; /* Break long words to prevent overflow */
   }
 }
