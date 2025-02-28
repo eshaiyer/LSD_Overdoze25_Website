@@ -4,17 +4,17 @@ import logo from "./filmsoc.png";
 
 function QuizSoc() {
   const players = [
-    { id: 1, name: "ECE", score: 0 },
-    { id: 2, name: "EEE", score: 0 },
-    { id: 3, name: "CSE", score: 0 },
-    { id: 4, name: "IT", score: 0 },
-    { id: 5, name: "MACS", score: 0 },
-    { id: 6, name: "Civil", score: 0 },
-    { id: 7, name: "Mechanical", score: 0 },
-    { id: 8, name: "MME", score: 0 },
-    { id: 9, name: "Mining", score: 0 },
-    { id: 10, name: "Chemical", score: 0 },
-    { id: 11, name: "Basic Sciences", score: 0 },
+    { id: 1, name: "Basic Sciences", score: 0 },
+    { id: 2, name: "Chemical", score: 0 },
+    { id: 3, name: "Civil", score: 0 },
+    { id: 4, name: "CSE", score: 0 },
+    { id: 5, name: "ECE", score: 0 },
+    { id: 6, name: "EEE", score: 0 },
+    { id: 7, name: "IT", score: 0 },
+    { id: 8, name: "MACS", score: 0 },
+    { id: 9, name: "Mechanical", score: 0 },
+    { id: 10, name: "Mining", score: 0 },
+    { id: 11, name: "MME", score: 0 },
     { id: 12, name: "SOM", score: 0 },
   ];
 
