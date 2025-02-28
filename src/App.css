@@ -1,13 +1,22 @@
 /* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
 .App {
   text-align: center;
-  margin: 0;
+  min-height: 100vh;
+  position: relative;
   padding: 20px;
-  min-height: 100vh; /* Ensure the background covers the full viewport height */
-  position: relative; /* Required for the pseudo-element positioning */
-  color: white; /* Change text color to contrast with the background */
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+  overflow-x: hidden;
 }
 
 .App::before {
@@ -17,368 +26,123 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/background.png'); /* Path to the image in the public folder */
+  background-image: url('./assets/background.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0; /* Adjust opacity of the background image (0 = fully transparent, 1 = fully opaque) */
-  z-index: -1; /* Place the pseudo-element behind the content */
+  opacity: 0.5;
+  z-index: -1;
 }
 
-.lsdlogo {
+/* Logo Styles */
+.lsdlogo, .logo, .date {
   display: block;
-  margin: 0 auto;
-  width: 150px; /* Default size for desktop */
-  max-width: 100%; /* Ensure it scales down on smaller screens */
-  height: auto; /* Maintain aspect ratio */
-  position: relative;
-  z-index: 1;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%; /* Ensure the logo scales down on smaller screens */
-  width: 680px; /* Default width for desktop */
-  height: auto; /* Maintain aspect ratio */
-  position: relative;
-  z-index: 1;
-  margin-top: 0px;
-}
-
-.date {
-  display: block;
-  margin: 0 auto;
-  width: 150px; /* Default size for desktop */
-  max-width: 100%; /* Ensure it scales down on smaller screens */
-  height: auto; /* Maintain aspect ratio */
-  position: relative;
-  z-index: 1;
-  margin-top: 0px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 680px;
+  height: auto;
 }
 
 /* Navigation Menu */
 .nav-menu {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 18px; /* Default gap for desktop */
-  margin-bottom: 20px;
-  font-size: 35px; /* Default font size for desktop */
-  margin-top: 25px;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: white;
-  border-radius: 10px;
-  padding: 5px 10px;
   font-weight: bold;
-  font-size: 26px; /* Default font size for desktop */
-  white-space: nowrap; /* Prevent text from wrapping */
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .nav-menu a:hover {
-  color: rgb(238, 139, 224); /* Green color on hover */
+  color: rgb(238, 139, 224);
 }
 
-/* Schedule Section */
-.schedule-section {
-  text-align: center;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  border-radius: 10px;
-  max-width: 600px; /* Limit the maximum width */
-  width: 90%; /* Responsive width */
-}
-
-.schedule-section h3 {
-  font-size: 24px; /* Default font size for desktop */
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: white; /* White text color */
-}
-
-.schedule-section p {
-  font-size: 18px; /* Default font size for desktop */
-  color: white; /* White text color */
-  margin: 10px 0; /* Add space between lines */
-  line-height: 1.5; /* Improve readability */
-}
-
-/* Text Box */
-.text-box {
-  background-color: rgb(247, 252, 251); /* Light gray background */
-  border: 2px solid black; /* Green border */
-  border-radius: 10px; /* Rounded corners */
-  padding: 15px; /* Space inside the box */
-  font-size: 18px; /* Default font size for desktop */
-  width: 90%; /* Responsive width */
-  max-width: 710px; /* Maximum width for desktop */
-  margin: 20px auto; /* Center the box and add space around it */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  color: black;
-  font-weight: bold;
-  opacity: 75%;
-}
-
-/* Image Grid */
+/* Responsive Image Grid */
 .image-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
   justify-content: center;
-  gap: 20px; /* Default gap for desktop */
-  flex-wrap: wrap;
-}
-
-.image-container {
-  text-align: center;
-  margin-bottom: 20px; /* Add space below the container */
-}
-
-.image-wrapper {
-  position: relative;
-  display: inline-block;
-  border: 0px solid black; /* Green border around the image */
-  border-radius: 10px; /* Rounded corners */
-  overflow: hidden; /* Ensure the border wraps around the content */
 }
 
 .image-wrapper img {
-  width: 150px; /* Default size for desktop */
-  height: auto;
-  border-radius: 1px; /* Slightly rounded corners for the image */
-  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
-  padding: 5px;
-}
-
-.hover-text {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: black; /* Semi-transparent green background */
-  color: white; /* Text color */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
-  border-radius: 5px; /* Match the border radius */
-  font-weight: bold;
-}
-
-.image-wrapper:hover .image {
-  opacity: 0; /* Hide the image on hover */
-}
-
-.image-wrapper:hover .hover-text {
-  opacity: 1; /* Show the text on hover */
+  max-width: 150px;
+  height: auto;
+  transition: opacity 0.3s ease;
 }
 
 /* Leaderboard */
 .leaderboard {
-  max-width: 500px; /* Default width for desktop */
-  width: 100%; /* Ensure it scales down on smaller screens */
-  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+  margin: 20px auto;
   background-color: black;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
 
-/* Top 3 Ranks */
-.top-three {
-  padding: 20px; /* Default padding for desktop */
-  background-color: rgb(17, 16, 16);
-  color: white;
-}
-
-.top-rank {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px; /* Default padding for desktop */
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
-}
-
-.top-rank:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.rank-1 {
-  background-color: #ffd700; /* Gold for 1st rank */
-}
-
-.rank-2 {
-  background-color: #c0c0c0; /* Silver for 2nd rank */
-}
-
-.rank-3 {
-  background-color: #cd7f32; /* Bronze for 3rd rank */
-}
-
-.rank {
-  font-weight: bold;
-  font-size: 20px; /* Default font size for desktop */
-  width: 30px; /* Fixed width for rank number */
-  text-align: center;
-}
-
-.name {
-  flex-grow: 1;
-  margin: 0 10px;
-  font-size: 18px; /* Default font size for desktop */
-  font-weight: bold;
-}
-
-.score {
-  font-weight: bold;
-  font-size: 18px; /* Default font size for desktop */
-  width: 60px; /* Fixed width for score */
-  text-align: right;
-}
-
-/* Scrollable Ranks */
-.scrollable-ranks {
-  max-height: 0; /* Initially hidden */
-  overflow-y: auto; /* Enable vertical scrolling */
-  transition: max-height 0.5s ease-out; /* Smooth transition */
-}
-
-.leaderboard:hover .scrollable-ranks {
-  max-height: 200px; /* Reveal on hover */
-}
-
-.rank-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  transition: background-color 0.2s ease; /* Smooth hover effect */
-}
-
-.rank-item:hover {
-  background-color: rgb(58, 53, 53); /* Light gray background on hover */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.rank-item:last-child {
-  border-bottom: none;
-}
-
-/* Headings */
+/* Responsive Typography */
 .h1, .h2, .h3, .h4, .h5 {
-  font-size: 24px; /* Default font size for desktop */
+  font-size: clamp(18px, 4vw, 24px);
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller desktops */
+/* Responsive Styles for Tablets */
 @media (max-width: 768px) {
-  .lsdlogo {
-    width: 120px; /* Smaller logo for tablets */
-  }
-
-  .logo {
-    width: 80%; /* Adjust logo width for tablets */
-  }
-
-  .date {
-    width: 120px; /* Smaller date image for tablets */
+  .logo, .lsdlogo, .date {
+    width: 80%;
   }
 
   .nav-menu {
-    font-size: 28px; /* Smaller font size for tablets */
-    gap: 10px; /* Smaller gap for tablets */
+    font-size: 18px;
+    gap: 10px;
   }
 
   .nav-menu a {
-    font-size: 20px; /* Smaller font size for tablets */
+    font-size: 16px;
   }
 
   .text-box {
-    width: 90%; /* Adjust text box width for tablets */
-    font-size: 16px; /* Smaller font size for tablets */
-  }
-
-  .leaderboard {
-    width: 90%; /* Adjust leaderboard width for tablets */
+    width: 90%;
+    font-size: 16px;
   }
 
   .image-wrapper img {
-    width: 120px; /* Smaller image for tablets */
-  }
-
-  .schedule-section h3 {
-    font-size: 22px; /* Smaller font size for tablets */
-  }
-
-  .schedule-section p {
-    font-size: 16px; /* Smaller font size for tablets */
+    max-width: 120px;
   }
 }
 
-/* For mobile devices */
+/* Responsive Styles for Mobile */
 @media (max-width: 480px) {
-  .lsdlogo {
-    width: 100px; /* Even smaller logo for mobile */
-  }
-
-  .logo {
-    width: 90%; /* Adjust logo width for mobile */
-  }
-
-  .date {
-    width: 100px; /* Even smaller date image for mobile */
+  .logo, .lsdlogo, .date {
+    width: 90%;
   }
 
   .nav-menu {
-    flex-direction: column; /* Stack items vertically on mobile */
-    gap: 5px; /* Smaller gap for mobile */
-    font-size: 24px; /* Smaller font size for mobile */
-    margin-top: 15px; /* Reduce margin for mobile */
+    flex-direction: column;
+    gap: 5px;
   }
 
   .nav-menu a {
-    font-size: 18px; /* Even smaller font size for mobile */
-    padding: 5px 8px; /* Adjust padding for mobile */
-    width: 100%; /* Full width for mobile */
-    text-align: center; /* Center-align text */
+    font-size: 14px;
+    padding: 6px 8px;
   }
 
   .text-box {
-    width: 95%; /* Adjust text box width for mobile */
-    font-size: 14px; /* Even smaller font size for mobile */
+    width: 95%;
+    font-size: 14px;
   }
 
-  .image-wrapper img {
-    width: 100px; /* Even smaller image for mobile */
-  }
-
-  .schedule-section h3 {
-    font-size: 20px; /* Smaller font size for mobile */
-  }
-
-  .schedule-section p {
-    font-size: 14px; /* Smaller font size for mobile */
-  }
-
-  .h1, .h2, .h3, .h4, .h5 {
-    font-size: 20px; /* Smaller font size for headings on mobile */
-    margin-top: 20px; /* Reduce margin for headings on mobile */
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
