@@ -8,13 +8,13 @@ function QuizSoc() {
     { id: 2, name: "Chemical", score: 0 },
     { id: 3, name: "Civil", score: 50 },
     { id: 4, name: "CSE", score: 100 },
-    { id: 5, name: "ECE", score: 100 },
+    { id: 5, name: "ECE", score: 300 },
     { id: 6, name: "EEE", score: 0 },
     { id: 7, name: "IT/AI", score: 50 },
     { id: 8, name: "MACS/CDS", score: 0 },
-    { id: 9, name: "Mechanical", score: 50 },
+    { id: 9, name: "Mechanical", score: 550 },
     { id: 10, name: "Mining", score: 0 },
-    { id: 11, name: "MME", score: 50 },
+    { id: 11, name: "MME", score: 350 },
     { id: 12, name: "SOM", score: 0 },
   ];
 
