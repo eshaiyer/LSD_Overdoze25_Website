@@ -6,10 +6,10 @@ function QuizSoc() {
   const players = [
     { id: 1, name: "Basic Sciences", score: 0 },
     { id: 2, name: "Chemical", score: 0 },
-    { id: 3, name: "Civil", score: 0 },
+    { id: 3, name: "Civil", score: 50 },
     { id: 4, name: "CSE", score: 0 },
-    { id: 5, name: "ECE", score: 0 },
-    { id: 6, name: "EEE", score: 0 },
+    { id: 5, name: "ECE", score: 50 },
+    { id: 6, name: "EEE", score: 100 },
     { id: 7, name: "IT/AI", score: 0 },
     { id: 8, name: "MACS/CDS", score: 0 },
     { id: 9, name: "Mechanical", score: 0 },
