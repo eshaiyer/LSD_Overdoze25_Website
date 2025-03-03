@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# LSD_Overdose25_Website
+# LSD_Overdoze25_Website
 =======
 # Getting Started with Create React App
 
